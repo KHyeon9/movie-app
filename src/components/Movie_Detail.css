@@ -1,0 +1,11 @@
+.movie_detail {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.movie_detail_genres {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+}
