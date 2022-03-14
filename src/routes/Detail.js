@@ -21,7 +21,7 @@ function Detail() {
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1 className="loading">Loading...</h1>
       ) : (
         <div className="detail_div">
           <Movie_Detail

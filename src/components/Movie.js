@@ -13,25 +13,30 @@ function Movie({
   id,
 }) {
   return (
-    <div className="movie">
-      <h2 className="movie_title">
-        <Link to={`/movie/${id}`}>{title}</Link>
-      </h2>
-      <h3 className="movie_year">{year}</h3>
-      <img className="movie_img" src={coverImage} alt={title} />
-      <div className="movie_info">
-        <span>Rating: {rating} point </span>
-        <span>Runtime: {runtime} min </span>
+    <Link to={`/movie/${id}`}>
+      <div className="movie">
+        <img className="movie_img" src={coverImage} alt={title} />
+        <div>
+          <h2 className="movie_title">{title}</h2>
+          <h3 className="movie_year">{year}</h3>
+          <ul className="movie_genres">
+            {genres.map((g) => (
+              <li key={g}>{g}</li>
+            ))}
+          </ul>
+          <div className="movie_info">
+            <span>Rating: {rating} point </span>
+            <span>Runtime: {runtime} min </span>
+          </div>
+          <div>
+            <h4>Sumary</h4>
+            <p className="movie_summary">
+              {summary.length > 200 ? `${summary.slice(0, 200)}...` : summary}
+            </p>
+          </div>
+        </div>
       </div>
-      <ul className="movie_genres">
-        {genres.map((g) => (
-          <li key={g} className="movie_genre">
-            {g}
-          </li>
-        ))}
-      </ul>
-      <p className="movie_summary">{summary}</p>
-    </div>
+    </Link>
   );
 }
 
