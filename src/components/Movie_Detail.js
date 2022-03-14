@@ -29,7 +29,9 @@ function Movie_Detail({
       <p className="movie_detail_summary">{summary}</p>
       <div>
         <nav>
-          <Link to="/movie/">Home</Link>
+          <h3>
+            <Link to="/movie/">Home</Link>
+          </h3>
         </nav>
       </div>
     </div>
